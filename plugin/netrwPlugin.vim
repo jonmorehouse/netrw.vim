@@ -17,10 +17,10 @@
 "  (James 1:22 RSV)
 " =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 " Load Once: {{{1
-if &cp || exists("g:loaded_netrwPlugin")
+if &cp || exists("g:loaded_netrwPluginFork")
  finish
 endif
-let g:loaded_netrwPlugin = "v142"
+let g:loaded_netrwPluginFork = "v142"
 if v:version < 702
  echohl WarningMsg | echo "***netrw*** you need vim version 7.2 for this version of netrw" | echohl None
  finish
