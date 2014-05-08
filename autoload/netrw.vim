@@ -1878,8 +1878,8 @@ fun! s:NetrwMaps(islocal)
    inoremap <buffer> <silent> qb  <c-o>:<c-u>call <SID>NetrwBookHistHandler(2,b:netrw_curdir)<cr>
    inoremap <buffer> <silent> qf  <c-o>:<c-u>call <SID>NetrwFileInfo(1,<SID>NetrwGetWord())<cr>
    inoremap <buffer> <silent> r   <c-o>:let g:netrw_sort_direction= (g:netrw_sort_direction =~ 'n')? 'r' : 'n'<bar>exe "norm! 0"<bar>call <SID>NetrwRefresh(1,<SID>NetrwBrowseChgDir(1,'./'))<cr>
-   inoremap <buffer> <silent> s   <c-o>:call <SID>NetrwSortStyle(1)<cr>
-   inoremap <buffer> <silent> S   <c-o>:call <SID>NetSortSequence(1)<cr>
+   "inoremap <buffer> <silent> s   <c-o>:call <SID>NetrwSortStyle(1)<cr>
+   "inoremap <buffer> <silent> S   <c-o>:call <SID>NetSortSequence(1)<cr>
    inoremap <buffer> <silent> T   <c-o>:call <SID>NetrwSplit(4)<bar>norm! gT<cr>
    inoremap <buffer> <silent> t   <c-o>:call <SID>NetrwSplit(4)<cr>
    inoremap <buffer> <silent> u   <c-o>:<c-u>call <SID>NetrwBookHistHandler(4,expand("%"))<cr>
@@ -1924,8 +1924,8 @@ fun! s:NetrwMaps(islocal)
    nnoremap <buffer> <silent> qb  :<c-u>call <SID>NetrwBookHistHandler(2,b:netrw_curdir)<cr>
    nnoremap <buffer> <silent> qf  :<c-u>call <SID>NetrwFileInfo(1,<SID>NetrwGetWord())<cr>
    nnoremap <buffer> <silent> r   :let g:netrw_sort_direction= (g:netrw_sort_direction =~ 'n')? 'r' : 'n'<bar>exe "norm! 0"<bar>call <SID>NetrwRefresh(1,<SID>NetrwBrowseChgDir(1,'./'))<cr>
-   nnoremap <buffer> <silent> s   :call <SID>NetrwSortStyle(1)<cr>
-   nnoremap <buffer> <silent> S   :call <SID>NetSortSequence(1)<cr>
+   "nnoremap <buffer> <silent> s   :call <SID>NetrwSortStyle(1)<cr>
+   "nnoremap <buffer> <silent> S   :call <SID>NetSortSequence(1)<cr>
    nnoremap <buffer> <silent> T   :call <SID>NetrwSplit(4)<bar>norm! gT<cr>
    nnoremap <buffer> <silent> t   :call <SID>NetrwSplit(4)<cr>
    nnoremap <buffer> <silent> u   :<c-u>call <SID>NetrwBookHistHandler(4,expand("%"))<cr>
