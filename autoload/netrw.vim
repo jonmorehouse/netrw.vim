@@ -1849,9 +1849,9 @@ fun! s:NetrwMaps(islocal)
    inoremap <buffer> <silent> -   <c-o>:exe "norm! 0"<bar>call netrw#LocalBrowseCheck(<SID>NetrwBrowseChgDir(1,'../'))<cr>
    inoremap <buffer> <silent> <cr>  <c-o>:call netrw#LocalBrowseCheck(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord()))<cr>
    inoremap <buffer> <silent> d   <c-o>:call <SID>NetrwMakeDir("")<cr>
-   inoremap <buffer> <silent> gb  <c-o>:<c-u>call <SID>NetrwBookHistHandler(1,b:netrw_curdir)<cr>
-   inoremap <buffer> <silent> gh  <c-o>:<c-u>call <SID>NetrwHidden(1)<cr>
-   inoremap <buffer> <silent> gp  <c-o>:<c-u>call <SID>NetrwChgPerm(1,b:netrw_curdir)<cr>
+   "inoremap <buffer> <silent> gb  <c-o>:<c-u>call <SID>NetrwBookHistHandler(1,b:netrw_curdir)<cr>
+   "inoremap <buffer> <silent> gh  <c-o>:<c-u>call <SID>NetrwHidden(1)<cr>
+   "inoremap <buffer> <silent> gp  <c-o>:<c-u>call <SID>NetrwChgPerm(1,b:netrw_curdir)<cr>
    inoremap <buffer> <silent> I   <c-o>:call <SID>NetrwBannerCtrl(1)<cr>
    inoremap <buffer> <silent> i   <c-o>:call <SID>NetrwListStyle(1)<cr>
    inoremap <buffer> <silent> mb  <c-o>:<c-u>call <SID>NetrwBookHistHandler(0,b:netrw_curdir)<cr>
@@ -1897,7 +1897,7 @@ fun! s:NetrwMaps(islocal)
    nnoremap <buffer> <silent> gd  :<c-u>call <SID>NetrwForceChgDir(1,<SID>NetrwGetWord())<cr>
    nnoremap <buffer> <silent> gf  :<c-u>call <SID>NetrwForceFile(1,<SID>NetrwGetWord())<cr>
    nnoremap <buffer> <silent> gh  :<c-u>call <SID>NetrwHidden(1)<cr>
-   nnoremap <buffer> <silent> gp  :<c-u>call <SID>NetrwChgPerm(1,b:netrw_curdir)<cr>
+   "nnoremap <buffer> <silent> gp  :<c-u>call <SID>NetrwChgPerm(1,b:netrw_curdir)<cr>
    nnoremap <buffer> <silent> I   :call <SID>NetrwBannerCtrl(1)<cr>
    nnoremap <buffer> <silent> i   :call <SID>NetrwListStyle(1)<cr>
    "nnoremap <buffer> <silent> mb  :<c-u>call <SID>NetrwBookHistHandler(0,b:netrw_curdir)<cr>
@@ -2010,7 +2010,7 @@ fun! s:NetrwMaps(islocal)
    nnoremap <buffer> <silent> gd  :<c-u>call <SID>NetrwForceChgDir(0,<SID>NetrwGetWord())<cr>
    nnoremap <buffer> <silent> gf  :<c-u>call <SID>NetrwForceFile(0,<SID>NetrwGetWord())<cr>
    nnoremap <buffer> <silent> gh  :<c-u>call <SID>NetrwHidden(0)<cr>
-   nnoremap <buffer> <silent> gp  :<c-u>call <SID>NetrwChgPerm(0,b:netrw_curdir)<cr>
+   "nnoremap <buffer> <silent> gp  :<c-u>call <SID>NetrwChgPerm(0,b:netrw_curdir)<cr>
    nnoremap <buffer> <silent> C   :let g:netrw_chgwin= winnr()<cr>
    nnoremap <buffer> <silent> i   :call <SID>NetrwListStyle(0)<cr>
    nnoremap <buffer> <silent> I   :call <SID>NetrwBannerCtrl(1)<cr>
@@ -2053,7 +2053,7 @@ fun! s:NetrwMaps(islocal)
    inoremap <buffer> <silent> mz  <c-o>:<c-u>call <SID>NetrwMarkFileCompress(0)<cr>
    inoremap <buffer> <silent> gb  <c-o>:<c-u>call <SID>NetrwBookHistHandler(1,b:netrw_cur)<cr>
    inoremap <buffer> <silent> gh  <c-o>:<c-u>call <SID>NetrwHidden(0)<cr>
-   inoremap <buffer> <silent> gp  <c-o>:<c-u>call <SID>NetrwChgPerm(0,b:netrw_curdir)<cr>
+   "inoremap <buffer> <silent> gp  <c-o>:<c-u>call <SID>NetrwChgPerm(0,b:netrw_curdir)<cr>
    inoremap <buffer> <silent> C   <c-o>:let g:netrw_chgwin= winnr()<cr>
    inoremap <buffer> <silent> i   <c-o>:call <SID>NetrwListStyle(0)<cr>
    inoremap <buffer> <silent> I   <c-o>:call <SID>NetrwBannerCtrl(1)<cr>
