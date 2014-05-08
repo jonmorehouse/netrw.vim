@@ -1873,8 +1873,8 @@ fun! s:NetrwMaps(islocal)
    inoremap <buffer> <silent> mz  <c-o>:<c-u>call <SID>NetrwMarkFileCompress(1)<cr>
    inoremap <buffer> <silent> O   <c-o>:call <SID>NetrwObtain(1)<cr>
    inoremap <buffer> <silent> o   <c-o>:call <SID>NetrwSplit(3)<cr>
-   inoremap <buffer> <silent> p   <c-o>:call <SID>NetrwPreview(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),1))<cr>
-   inoremap <buffer> <silent> P   <c-o>:call <SID>NetrwPrevWinOpen(1)<cr>
+   "inoremap <buffer> <silent> p   <c-o>:call <SID>NetrwPreview(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),1))<cr>
+   "inoremap <buffer> <silent> P   <c-o>:call <SID>NetrwPrevWinOpen(1)<cr>
    inoremap <buffer> <silent> qb  <c-o>:<c-u>call <SID>NetrwBookHistHandler(2,b:netrw_curdir)<cr>
    inoremap <buffer> <silent> qf  <c-o>:<c-u>call <SID>NetrwFileInfo(1,<SID>NetrwGetWord())<cr>
    inoremap <buffer> <silent> r   <c-o>:let g:netrw_sort_direction= (g:netrw_sort_direction =~ 'n')? 'r' : 'n'<bar>exe "norm! 0"<bar>call <SID>NetrwRefresh(1,<SID>NetrwBrowseChgDir(1,'./'))<cr>
@@ -1900,23 +1900,23 @@ fun! s:NetrwMaps(islocal)
    nnoremap <buffer> <silent> gp  :<c-u>call <SID>NetrwChgPerm(1,b:netrw_curdir)<cr>
    nnoremap <buffer> <silent> I   :call <SID>NetrwBannerCtrl(1)<cr>
    nnoremap <buffer> <silent> i   :call <SID>NetrwListStyle(1)<cr>
-   nnoremap <buffer> <silent> mb  :<c-u>call <SID>NetrwBookHistHandler(0,b:netrw_curdir)<cr>
-   nnoremap <buffer> <silent> mB  :<c-u>call <SID>NetrwBookHistHandler(6,b:netrw_curdir)<cr>
-   nnoremap <buffer> <silent> mc  :<c-u>call <SID>NetrwMarkFileCopy(1)<cr>
-   nnoremap <buffer> <silent> md  :<c-u>call <SID>NetrwMarkFileDiff(1)<cr>
+   "nnoremap <buffer> <silent> mb  :<c-u>call <SID>NetrwBookHistHandler(0,b:netrw_curdir)<cr>
+   "nnoremap <buffer> <silent> mB  :<c-u>call <SID>NetrwBookHistHandler(6,b:netrw_curdir)<cr>
+   "nnoremap <buffer> <silent> mc  :<c-u>call <SID>NetrwMarkFileCopy(1)<cr>
+   "nnoremap <buffer> <silent> md  :<c-u>call <SID>NetrwMarkFileDiff(1)<cr>
    "nnoremap <buffer> <silent> me :<c-u>call <SID>NetrwMarkFileEdit(1)<cr>
-   nnoremap <buffer> <silent> mf  :<c-u>call <SID>NetrwMarkFile(1,<SID>NetrwGetWord())<cr>
-   nnoremap <buffer> <silent> mg  :<c-u>call <SID>NetrwMarkFileGrep(1)<cr>
-   nnoremap <buffer> <silent> mh  :<c-u>call <SID>NetrwMarkHideSfx(1)<cr>
-   nnoremap <buffer> <silent> mm  :<c-u>call <SID>NetrwMarkFileMove(1)<cr>
+   "nnoremap <buffer> <silent> mf  :<c-u>call <SID>NetrwMarkFile(1,<SID>NetrwGetWord())<cr>
+   "nnoremap <buffer> <silent> mg  :<c-u>call <SID>NetrwMarkFileGrep(1)<cr>
+   "nnoremap <buffer> <silent> mh  :<c-u>call <SID>NetrwMarkHideSfx(1)<cr>
+   "nnoremap <buffer> <silent> mm  :<c-u>call <SID>NetrwMarkFileMove(1)<cr>
    "nnoremap <buffer> <silent> mp  :<c-u>call <SID>NetrwMarkFilePrint(1)<cr>
-   nnoremap <buffer> <silent> mr  :<c-u>call <SID>NetrwMarkFileRegexp(1)<cr>
-   nnoremap <buffer> <silent> ms  :<c-u>call <SID>NetrwMarkFileSource(1)<cr>
-   nnoremap <buffer> <silent> mT  :<c-u>call <SID>NetrwMarkFileTag(1)<cr>
-   nnoremap <buffer> <silent> mt  :<c-u>call <SID>NetrwMarkFileTgt(1)<cr>
-   nnoremap <buffer> <silent> mu  :<c-u>call <SID>NetrwUnMarkFile(1)<cr>
-   nnoremap <buffer> <silent> mx  :<c-u>call <SID>NetrwMarkFileExe(1)<cr>
-   nnoremap <buffer> <silent> mz  :<c-u>call <SID>NetrwMarkFileCompress(1)<cr>
+   "nnoremap <buffer> <silent> mr  :<c-u>call <SID>NetrwMarkFileRegexp(1)<cr>
+   "nnoremap <buffer> <silent> ms  :<c-u>call <SID>NetrwMarkFileSource(1)<cr>
+   "nnoremap <buffer> <silent> mT  :<c-u>call <SID>NetrwMarkFileTag(1)<cr>
+   "nnoremap <buffer> <silent> mt  :<c-u>call <SID>NetrwMarkFileTgt(1)<cr>
+   "nnoremap <buffer> <silent> mu  :<c-u>call <SID>NetrwUnMarkFile(1)<cr>
+   "nnoremap <buffer> <silent> mx  :<c-u>call <SID>NetrwMarkFileExe(1)<cr>
+   "nnoremap <buffer> <silent> mz  :<c-u>call <SID>NetrwMarkFileCompress(1)<cr>
    nnoremap <buffer> <silent> O   :call <SID>NetrwObtain(1)<cr>
    nnoremap <buffer> <silent> o   :call <SID>NetrwSplit(3)<cr>
    nnoremap <buffer> <silent> p   :call <SID>NetrwPreview(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),1))<cr>
