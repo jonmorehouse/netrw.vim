@@ -1885,7 +1885,7 @@ fun! s:NetrwMaps(islocal)
    inoremap <buffer> <silent> u   <c-o>:<c-u>call <SID>NetrwBookHistHandler(4,expand("%"))<cr>
    inoremap <buffer> <silent> U   <c-o>:<c-u>call <SID>NetrwBookHistHandler(5,expand("%"))<cr>
    inoremap <buffer> <silent> v   <c-o>:call <SID>NetrwSplit(5)<cr>
-   inoremap <buffer> <silent> x   <c-o>:call netrw#NetrwBrowseX(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),0),0)"<cr>
+   "inoremap <buffer> <silent> x   <c-o>:call netrw#NetrwBrowseX(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),0),0)"<cr>
    nnoremap <buffer> <silent> a   :call <SID>NetrwHide(1)<cr>
    nnoremap <buffer> <silent> %   :call <SID>NetrwOpenFile(1)<cr>
    nnoremap <buffer> <silent> c   :exe "keepjumps lcd ".fnameescape(b:netrw_curdir)<cr>
@@ -1919,8 +1919,8 @@ fun! s:NetrwMaps(islocal)
    "nnoremap <buffer> <silent> mz  :<c-u>call <SID>NetrwMarkFileCompress(1)<cr>
    nnoremap <buffer> <silent> O   :call <SID>NetrwObtain(1)<cr>
    nnoremap <buffer> <silent> o   :call <SID>NetrwSplit(3)<cr>
-   nnoremap <buffer> <silent> p   :call <SID>NetrwPreview(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),1))<cr>
-   nnoremap <buffer> <silent> P   :call <SID>NetrwPrevWinOpen(1)<cr>
+   "nnoremap <buffer> <silent> p   :call <SID>NetrwPreview(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),1))<cr>
+   "nnoremap <buffer> <silent> P   :call <SID>NetrwPrevWinOpen(1)<cr>
    nnoremap <buffer> <silent> qb  :<c-u>call <SID>NetrwBookHistHandler(2,b:netrw_curdir)<cr>
    nnoremap <buffer> <silent> qf  :<c-u>call <SID>NetrwFileInfo(1,<SID>NetrwGetWord())<cr>
    nnoremap <buffer> <silent> r   :let g:netrw_sort_direction= (g:netrw_sort_direction =~ 'n')? 'r' : 'n'<bar>exe "norm! 0"<bar>call <SID>NetrwRefresh(1,<SID>NetrwBrowseChgDir(1,'./'))<cr>
@@ -1931,7 +1931,7 @@ fun! s:NetrwMaps(islocal)
    nnoremap <buffer> <silent> u   :<c-u>call <SID>NetrwBookHistHandler(4,expand("%"))<cr>
    nnoremap <buffer> <silent> U   :<c-u>call <SID>NetrwBookHistHandler(5,expand("%"))<cr>
    nnoremap <buffer> <silent> v   :call <SID>NetrwSplit(5)<cr>
-   nnoremap <buffer> <silent> x   :call netrw#NetrwBrowseX(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),0),0)"<cr>
+   "nnoremap <buffer> <silent> x   :call netrw#NetrwBrowseX(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),0),0)"<cr>
    if !hasmapto('<Plug>NetrwHideEdit')
     nmap <buffer> <unique> <c-h> <Plug>NetrwHideEdit
     imap <buffer> <unique> <c-h> <Plug>NetrwHideEdit
@@ -2016,8 +2016,8 @@ fun! s:NetrwMaps(islocal)
    nnoremap <buffer> <silent> I   :call <SID>NetrwBannerCtrl(1)<cr>
    nnoremap <buffer> <silent> o   :call <SID>NetrwSplit(0)<cr>
    nnoremap <buffer> <silent> O   :call <SID>NetrwObtain(0)<cr>
-   nnoremap <buffer> <silent> p   :call <SID>NetrwPreview(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),1))<cr>
-   nnoremap <buffer> <silent> P   :call <SID>NetrwPrevWinOpen(0)<cr>
+   "nnoremap <buffer> <silent> p   :call <SID>NetrwPreview(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),1))<cr>
+   "nnoremap <buffer> <silent> P   :call <SID>NetrwPrevWinOpen(0)<cr>
    nnoremap <buffer> <silent> qb  :<c-u>call <SID>NetrwBookHistHandler(2,b:netrw_curdir)<cr>
    nnoremap <buffer> <silent> mB  :<c-u>call <SID>NetrwBookHistHandler(6,b:netrw_curdir)<cr>
    nnoremap <buffer> <silent> qf  :<c-u>call <SID>NetrwFileInfo(0,<SID>NetrwGetWord())<cr>
@@ -2029,7 +2029,7 @@ fun! s:NetrwMaps(islocal)
    nnoremap <buffer> <silent> u   :<c-u>call <SID>NetrwBookHistHandler(4,b:netrw_curdir)<cr>
    nnoremap <buffer> <silent> U   :<c-u>call <SID>NetrwBookHistHandler(5,b:netrw_curdir)<cr>
    nnoremap <buffer> <silent> v   :call <SID>NetrwSplit(2)<cr>
-   nnoremap <buffer> <silent> x   :call netrw#NetrwBrowseX(<SID>NetrwBrowseChgDir(0,<SID>NetrwGetWord()),1)<cr>
+   "nnoremap <buffer> <silent> x   :call netrw#NetrwBrowseX(<SID>NetrwBrowseChgDir(0,<SID>NetrwGetWord()),1)<cr>
    nnoremap <buffer> <silent> %   :call <SID>NetrwOpenFile(0)<cr>
    inoremap <buffer> <silent> <cr>  <c-o>:call <SID>NetrwBrowse(0,<SID>NetrwBrowseChgDir(0,<SID>NetrwGetWord()))<cr>
    inoremap <buffer> <silent> <c-l> <c-o>:call <SID>NetrwRefresh(0,<SID>NetrwBrowseChgDir(0,'./'))<cr>
@@ -2059,8 +2059,8 @@ fun! s:NetrwMaps(islocal)
    inoremap <buffer> <silent> I   <c-o>:call <SID>NetrwBannerCtrl(1)<cr>
    inoremap <buffer> <silent> o   <c-o>:call <SID>NetrwSplit(0)<cr>
    inoremap <buffer> <silent> O   <c-o>:call <SID>NetrwObtain(0)<cr>
-   inoremap <buffer> <silent> p   <c-o>:call <SID>NetrwPreview(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),1))<cr>
-   inoremap <buffer> <silent> P   <c-o>:call <SID>NetrwPrevWinOpen(0)<cr>
+   "inoremap <buffer> <silent> p   <c-o>:call <SID>NetrwPreview(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),1))<cr>
+   "inoremap <buffer> <silent> P   <c-o>:call <SID>NetrwPrevWinOpen(0)<cr>
    inoremap <buffer> <silent> qb  <c-o>:<c-u>call <SID>NetrwBookHistHandler(2,b:netrw_curdir)<cr>
    inoremap <buffer> <silent> mB  <c-o>:<c-u>call <SID>NetrwBookHistHandler(6,b:netrw_curdir)<cr>
    inoremap <buffer> <silent> qf  <c-o>:<c-u>call <SID>NetrwFileInfo(0,<SID>NetrwGetWord())<cr>
@@ -2072,7 +2072,7 @@ fun! s:NetrwMaps(islocal)
    inoremap <buffer> <silent> u   <c-o>:<c-u>call <SID>NetrwBookHistHandler(4,b:netrw_curdir)<cr>
    inoremap <buffer> <silent> U   <c-o>:<c-u>call <SID>NetrwBookHistHandler(5,b:netrw_curdir)<cr>
    inoremap <buffer> <silent> v   <c-o>:call <SID>NetrwSplit(2)<cr>
-   inoremap <buffer> <silent> x   <c-o>:call netrw#NetrwBrowseX(<SID>NetrwBrowseChgDir(0,<SID>NetrwGetWord()),1)<cr>
+   "inoremap <buffer> <silent> x   <c-o>:call netrw#NetrwBrowseX(<SID>NetrwBrowseChgDir(0,<SID>NetrwGetWord()),1)<cr>
    inoremap <buffer> <silent> %   <c-o>:call <SID>NetrwOpenFile(0)<cr>
    if !hasmapto('<Plug>NetrwHideEdit')
     nmap <buffer> <c-h> <Plug>NetrwHideEdit
