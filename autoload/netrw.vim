@@ -1880,8 +1880,8 @@ fun! s:NetrwMaps(islocal)
    inoremap <buffer> <silent> r   <c-o>:let g:netrw_sort_direction= (g:netrw_sort_direction =~ 'n')? 'r' : 'n'<bar>exe "norm! 0"<bar>call <SID>NetrwRefresh(1,<SID>NetrwBrowseChgDir(1,'./'))<cr>
    "inoremap <buffer> <silent> s   <c-o>:call <SID>NetrwSortStyle(1)<cr>
    "inoremap <buffer> <silent> S   <c-o>:call <SID>NetSortSequence(1)<cr>
-   inoremap <buffer> <silent> T   <c-o>:call <SID>NetrwSplit(4)<bar>norm! gT<cr>
-   inoremap <buffer> <silent> t   <c-o>:call <SID>NetrwSplit(4)<cr>
+   "inoremap <buffer> <silent> T   <c-o>:call <SID>NetrwSplit(4)<bar>norm! gT<cr>
+   "inoremap <buffer> <silent> t   <c-o>:call <SID>NetrwSplit(4)<cr>
    inoremap <buffer> <silent> u   <c-o>:<c-u>call <SID>NetrwBookHistHandler(4,expand("%"))<cr>
    inoremap <buffer> <silent> U   <c-o>:<c-u>call <SID>NetrwBookHistHandler(5,expand("%"))<cr>
    inoremap <buffer> <silent> v   <c-o>:call <SID>NetrwSplit(5)<cr>
@@ -2068,7 +2068,7 @@ fun! s:NetrwMaps(islocal)
    inoremap <buffer> <silent> s   <c-o>:call <SID>NetrwSortStyle(0)<cr>
    inoremap <buffer> <silent> S   <c-o>:call <SID>NetSortSequence(0)<cr>
    inoremap <buffer> <silent> t   <c-o>:call <SID>NetrwSplit(1)<cr>
-   inoremap <buffer> <silent> T   <c-o>:call <SID>NetrwSplit(1)<bar>norm! gT<cr>
+   "inoremap <buffer> <silent> T   <c-o>:call <SID>NetrwSplit(1)<bar>norm! gT<cr>
    inoremap <buffer> <silent> u   <c-o>:<c-u>call <SID>NetrwBookHistHandler(4,b:netrw_curdir)<cr>
    inoremap <buffer> <silent> U   <c-o>:<c-u>call <SID>NetrwBookHistHandler(5,b:netrw_curdir)<cr>
    inoremap <buffer> <silent> v   <c-o>:call <SID>NetrwSplit(2)<cr>
