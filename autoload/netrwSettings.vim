@@ -1,7 +1,7 @@
 " netrwSettings.vim: makes netrw settings simpler
-" Date:		Sep 03, 2008
-" Maintainer:	Charles E Campbell, Jr <drchipNOSPAM at campbellfamily dot biz>
-" Version:	13
+" Date:   Sep 03, 2008
+" Maintainer: Charles E Campbell, Jr <drchipNOSPAM at campbellfamily dot biz>
+" Version:  13
 " Copyright:    Copyright (C) 1999-2007 Charles E. Campbell, Jr. {{{1
 "               Permission is hereby granted to use and distribute this code,
 "               with or without modifications, provided that this copyright
@@ -46,7 +46,7 @@ fun! netrwSettings#NetrwSettings()
   " these variables have the following default effects when they don't
   " exist (ie. have not been set by the user in his/her .vimrc)
   if !exists("g:netrw_liststyle")
-   let g:netrw_liststyle= 0
+   let g:netrw_liststyle= 4
    let g:netrw_list_cmd= "ssh HOSTNAME ls -FLa"
   endif
   if !exists("g:netrw_silent")
@@ -174,7 +174,7 @@ fun! netrwSettings#NetrwSettings()
   nmap <buffer> <silent> <F1>                       :call NetrwSettingHelp()<cr>
   nnoremap <buffer> <silent> <leftmouse> <leftmouse>:call NetrwSettingHelp()<cr>
   let tmpfile= tempname()
-  exe 'au BufWriteCmd	Netrw\ Settings	silent w! '.tmpfile.'|so '.tmpfile.'|call delete("'.tmpfile.'")|set nomod'
+  exe 'au BufWriteCmd Netrw\ Settings silent w! '.tmpfile.'|so '.tmpfile.'|call delete("'.tmpfile.'")|set nomod'
 endfun
 
 " ---------------------------------------------------------------------
@@ -189,7 +189,7 @@ fun! NetrwSettingHelp()
    try
     exe "he ".varhelp
    catch /^Vim\%((\a\+)\)\=:E149/
-   	echo "***sorry*** no help available for <".varhelp.">"
+    echo "***sorry*** no help available for <".varhelp.">"
    endtry
   elseif line(".") < s:netrw_settings_stop
    he netrw-settings
